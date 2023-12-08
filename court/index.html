@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <!-- Add meta tags to show icon/title in the menu in banter -->    
+    <meta property="og:title" content="Banter Court">
+    <meta property="og:description" content="Where Goats Rule the Courtroom!">
+    <meta property="og:image" content="https://cdn.glitch.global/c7debc17-f0f8-45c4-864a-369c5573d0c2/Banter-Court.jpg?v=1700655509160">
+    <meta name="sidequest-space-verification" content="da988ee3-5612-4952-b9dd-0e72ee0d8022">
+    
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    
+    <script src="/warpbox.js"></script>
+    
+    <script>
+    // A simple aframe component to handle the click
+      AFRAME.registerComponent('handle-click', {
+          init: function () {
+              // When you click on an element, run the animation on the parent element
+              this.el.addEventListener('click', () => {
+                 movePlayer({x: 7.83699989, y: 0, z: -25.8180008});
+              })
+          }
+      });
+            
+     function multispaw() {
+        const spawpoints = [];
+        spawpoints[0] = new THREE.Vector3(0, 0, 0);
+
+        const randomspawpoint = Math.floor(Math.random() * 1);
+        movePlayer(spawpoints[randomspawpoint]);
+      }
+      window.loadDoneCallback = () => multispaw();      
+    </script>
+    
+  </head>
+  <body>
+    <a-scene sq-assetbundle="android: https://cdn.glitch.me/c7debc17-f0f8-45c4-864a-369c5573d0c2/banter%20court_android_v8?v=1700651656558; 
+                             desktop: https://cdn.glitch.me/c7debc17-f0f8-45c4-864a-369c5573d0c2/banter%20court_standalonewindows_v8?v=1700651674542" 
+             sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-disableteleport sq-clippingplane="near: 0.05; far: 2000;">
+      
+       <!-- Video Player -->
+    <script src="https://vidya-player.glitch.me/playlist.js"
+            position="6.287 2.03 25.8" rotation="0 234.292 0" scale="2.45 2.4 2.45"
+            volume="10" button-position="6.280 1.27 25.793" button-rotation="0 234.292 0" 
+              button-scale="0.5 0.5 0.5" instance="banter-court" one-for-each-instance="false" announce="false"
+            playlist="PLZWiw-xxQ4SN5Esnfdv-jq8JTCtevDZ-q"></script>
+      
+   <!-- Coming Soon -->   
+     <!-- <a-entity position="0 1 5.5" rotation="0 180 0">
+        <a-box
+          sq-collider
+          scale="3 2 0.1"
+          color="yellow"
+        ></a-box>
+          <a-text
+            value="COMING SOON\nUnder Construction"
+            scale="0.8 0.8 0.8"
+            position="0 0 0.052"
+            align="center"
+            color="black"
+          ></a-text>
+      </a-entity> -->
+      
+   <!-- Jail Portal -->   
+   <!--   <a-link
+        title="Jail"
+        position="7.77 0.1 30.55"
+        rotation="0 225 0"
+        href="https://afkjail.glitch.me"
+      ></a-link> -->
+      
+    <!-- Cage Teleporter -->
+      <a-entity
+        id="WarpCube1"
+        scale="0.7 2 0.55"
+        position="8.095 0.2760005 24.89"
+        boxwarp="point:7.757 0.171 -23.894"
+        sq-boxcollider
+        sq-triggercollider>
+        <!--<a-box scale="1 1 1" material="color: white"></a-box>-->
+      </a-entity>
+        
+   <!-- Click Teleport -->
+    <a-box sq-collider sq-interactable handle-click material="transparent: true; opacity: 1; color: black" scale="0.1 0.1 0.1" position="8.45899963 0.15 24.6553001"></a-box> 
+    
+      
+     <!-- Put video player script below here!  -->
+      
+    </a-scene>
+  </body>
+</html>
