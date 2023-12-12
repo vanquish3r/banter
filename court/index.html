@@ -32,17 +32,20 @@
       window.loadDoneCallback = () => multispaw();      
     </script>
 
-  <!-- Image Player -->
+  <!-- Warpbox -->
         <script>
-      AFRAME.registerComponent("handle-click", {
-        init: function() {
-          const browser = document.getElementById("browser");
-          this.el.addEventListener("click", () => {
-            console.log(this.data);
-            browser.components['sq-browser'].runActions([{actionType: "postmessage", strParam1: JSON.stringify({type: this.data.type, url: this.data.url})}])
-          });
-        }
-      })
+AFRAME.registerComponent("boxwarp", {
+  schema: {
+    point: { type: "vec3" },
+  },
+  // this.data.{name}
+
+  init: function () {
+    this.el.addEventListener("trigger-enter", () => {
+      if(this.el.object3D.userData.isLocalPlayer) {movePlayer(this.data.point);}
+    });
+  },
+});
     </script>
     
   </head>
@@ -57,110 +60,6 @@
             volume="10" button-position="6.280 1.27 25.793" button-rotation="0 234.292 0" 
               button-scale="0.5 0.5 0.5" instance="banter-court" one-for-each-instance="false" announce="false"
             playlist="PLZWiw-xxQ4SN5Esnfdv-jq8JTCtevDZ-q"></script>
-
-      <!-- Image Player -->
-         <a-assets>
-        <img id="plane-textureScreen" src="https://cdn.discordapp.com/attachments/1067412677581873223/1181284645233508485/Tunnels_copy.png?ex=6580800e&is=656e0b0e&hm=abf34261ef8b5b3c3387cd2ee12e91dbd554d5262a19de75a7b6caade39679ce&">
-    </a-assets>
-     <a-entity id="browser" sq-browser="url: https://content-screen.glitch.me" 
-            position="0 0 0" 
-            rotation="0 153.493 0" 
-            scale="7 7 7">
-     </a-entity>
-     <a-entity position="0 0 0" scale="0.1 0.1 0.1" rotation="-30 153 0">
-       
-       
-       <a-plane id="image0" sq-collider  sq-interactable src="https://cdn.glitch.global/b3ec2074-57ba-4ff4-aed6-07342a20738b/BanterStudio.png?v=1698790817345"
-             handle-click="type: video; url: https://cdn.glitch.me/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/Indie%20Showcase%20BG.mp4?v=1701712593372" ></a-plane>
-       
-       <a-plane id="image1" sq-collider position="1.1 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/3%20X%20Quest3%20Banner%20Winter%20Musroom%20v3%20copyyyyy.png?v=1701712570395" >
-           <a-text value="2" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image2" sq-collider position="2.2 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/Drakheir_copy.png?v=1701712564481" >
-           <a-text value="3" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image3" sq-collider position="3.3 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/Rooms_Or_Realities_copy.png?v=1701712568450" >
-         <a-text value="4" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image4" sq-collider position="4.4 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/Bad_Freams_copy.png?v=1701712579461" >
-       
-         <a-text value="5" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image5" sq-collider position="5.5 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/All-In-One_Summer_Sports_copy.png?v=1701712571915" >
-         <a-text value="6" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image6" sq-collider position="6.6 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/Cactus_Cowboy-_Desert_Warfare_copy.png?v=1701712563317" >
-         <a-text value="7" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image7" sq-collider position="7.7 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/Track_Craft_copy.png?v=1701712575555" >
-         <a-text value="8" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image8" sq-collider position="8.8 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/MiraclePool_copy.png?v=1701712565763" >
-         <a-text value="9" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image9" sq-collider position="9.9 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.me/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/InRun_copy.png?v=1701712584120" >
-         <a-text value="10" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image10" sq-collider position="11 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/ArtOfCombat_copy.png?v=1701712573192" >
-         <a-text value="11" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image11" sq-collider position="12.1 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/AVO_Escape_Space_copy.png?v=1701712561937" >
-         <a-text value="12" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image12" sq-collider position="13.2 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/QuestTogether_copy.png?v=1701712567127" >
-         <a-text value="13" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image13" sq-collider position="14.3 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/Somnia_Demo_copy.png?v=1701712569754" >
-         <a-text value="14" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image14" sq-collider position="15.4 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/FunFitLand_copy.png?v=1701712582330" >
-         <a-text value="15" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image15" sq-collider position="16.5 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/Tunnels_copy.png?v=1701712576898" >
-         <a-text value="16" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image16" sq-collider position="17.6 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/Slink__Snatch-_Tales_of_Thievery_copy.png?v=1701712574494" >
-         <a-text value="17" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-       <a-plane id="image17" sq-collider position="18.7 0 0" sq-interactable 
-             handle-click="type: image; url: https://cdn.glitch.global/eb69b7d1-cc4e-4f03-86f4-76e575677bfc/3%20X%20Quest3%20Banner%20Winter%20Musroom%20v3%20copyyyyy.png?v=1701712570395" >
-         <a-text value="18" position="0 0 0.03" color="#000" scale="2 2 2"></a-text>
-       </a-plane>
-       
-    
-     </a-entity>
       
    <!-- Coming Soon -->   
      <!-- <a-entity position="0 1 5.5" rotation="0 180 0">
