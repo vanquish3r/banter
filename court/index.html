@@ -8,9 +8,7 @@
     
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     
-<!--    <script src="https://github.com/vanquish3r/banter/raw/main/court/warpbox.js"></script> -->
-    
-<!-- Cage exit and enter spawn point -->
+<!-- Cage exit and enter spawn point, script from AFK Jail by Moto. Thank you Moto!-->
     <script>
     // A simple aframe component to handle the click
       AFRAME.registerComponent('handle-click', {
@@ -31,32 +29,32 @@
       }
       window.loadDoneCallback = () => multispaw();      
     </script>
-
-  <!-- Warpbox -->
-<!--        <script>
-AFRAME.registerComponent("boxwarp", {
-  schema: {
-    point: { type: "vec3" },
-  },
-  // this.data.{name}
-
-  init: function () {
-    this.el.addEventListener("trigger-enter", () => {
-      if(this.el.object3D.userData.isLocalPlayer) {movePlayer(this.data.point);}
-    });
-  },
-});
-    </script> -->
+    
+      <!-- Clock script from Parlor by Ben. Thank you Ben!-->  
+    		<script>
+			setInterval(() => {
+				var now = new Date();
+				hourHand.object3D.rotation.z = 2 * Math.PI*(now.getHours()*60+now.getMinutes())/720;
+				minuteHand.object3D.rotation.z = 2 * Math.PI*(now.getMinutes()+now.getSeconds()/60)/60;
+				secondHand.object3D.rotation.z = 2 * Math.PI*now.getSeconds()/60;
+			}, 1000);
+		</script>
     
   </head>
   <body>
+
+<a-scene sq-assetbundle="android: https://github.com/vanquish3r/banter/raw/main/court/banter-court_android_v13; 
+                             desktop: https://github.com/vanquish3r/banter/raw/main/court/banter-court_standalonewindows_v13" 
+             sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-disableteleport sq-clippingplane="near: 0.05; far: 500;">
+  
 <!--    <a-scene sq-assetbundle="android: https://github.com/vanquish3r/banter/raw/main/court/banter-court_android_v14; 
                              desktop: https://github.com/vanquish3r/banter/raw/main/court/banter-court_standalonewindows_v14" 
              sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-disableteleport sq-clippingplane="near: 0.05; far: 500;">
    -->
-<a-scene sq-assetbundle="android: https://cdn.glitch.me/c7debc17-f0f8-45c4-864a-369c5573d0c2/banter-court_android_v19?v=1703316689479; 
+<!--<a-scene sq-assetbundle="android: https://cdn.glitch.me/c7debc17-f0f8-45c4-864a-369c5573d0c2/banter-court_android_v19?v=1703316689479; 
                              desktop: https://cdn.glitch.me/c7debc17-f0f8-45c4-864a-369c5573d0c2/banter-court_standalonewindows_v19?v=1703317433707"   
              sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-disableteleport sq-clippingplane="near: 0.05; far: 500;" sq-friendpositionjoinallowed="false">
+    -->
     
        <!-- Video Player -->
    <script src="https://vidya-player.glitch.me/playlist.js"
@@ -69,47 +67,30 @@ AFRAME.registerComponent("boxwarp", {
 <!--<a-entity   id="banter-court" 
                 sq-browser="url: https://screen-cast.glitch.me/?sid=5671310878734176; mipMaps: 1; pixelsPerUnit: 1600; mode: local;" position="0 -2 0" rotation="0 180 0" announce="false" scale="0.9 0.95 1">
        </a-entity>-->
-      
-   <!-- Coming Soon -->   
-     <!-- <a-entity position="0 1 5.5" rotation="0 180 0">
-        <a-box
-          sq-collider
-          scale="3 2 0.1"
-          color="yellow"
-        ></a-box>
-          <a-text
-            value="COMING SOON\nUnder Construction"
-            scale="0.8 0.8 0.8"
-            position="0 0 0.052"
-            align="center"
-            color="black"
-          ></a-text>
-      </a-entity> -->
-      
-   <!-- Jail Portal -->   
-   <!--   <a-link
+
+        <!-- Jail Portal -->   
+   <a-link
         title="Jail"
-        position="7.77 0.1 30.55"
-        rotation="0 225 0"
+        position="-7.507 0.1 7.402"
+        rotation="0 135 0"
         href="https://afkjail.glitch.me"
-      ></a-link> -->
-      
-        <!-- Cage Teleporter -->
-<!--      <a-entity
-        id="WarpCube1"
-        scale="0.7 2 0.55"
-        position="8.095 0.2760005 24.89"
-        boxwarp="point:7.757 0.171 -23.894"
-        sq-boxcollider
-        sq-triggercollider>
-       <a-box scale="1 1 1" material="color: white"></a-box>
-      </a-entity> -->
+      ></a-link>
         
-   <!-- Click Teleport -->
+   <!-- Click Teleport from AFK Jail by Moto. Thank you Moto! -->
     <a-box sq-collider sq-interactable handle-click material="transparent: true; opacity: 1; color: black" scale="0.1 0.1 0.1" position="8.45899963 0.15 24.6553001"></a-box> 
     
-      
-     <!-- Put video player script below here!  -->
+			<!-- Clock from Parlor by Ben. Thank you Ben! -->
+			<a-entity position="-0.098 5.672 31.052">
+				<a-entity id="hourHand">
+					<a-box position="0 0.065 0" scale="0.02 0.13 0.01" color="#f0f0f0"></a-box>
+				</a-entity>
+				<a-entity id="minuteHand">
+					<a-box position="0 0.085 0" scale="0.01 0.17 0.01" color="#f0f0f0"></a-box>
+				</a-entity>
+				<a-entity id="secondHand">
+					<a-box position="0 0.1 0" scale="0.005 0.2 0.01" color="#f0f0f0"></a-box>
+				</a-entity>
+			</a-entity>
       
     </a-scene>
   </body>
