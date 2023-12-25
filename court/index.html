@@ -50,10 +50,14 @@ AFRAME.registerComponent("boxwarp", {
     
   </head>
   <body>
-    <a-scene sq-assetbundle="android: https://github.com/vanquish3r/banter/raw/main/court/banter-court_android_v14; 
+<!--    <a-scene sq-assetbundle="android: https://github.com/vanquish3r/banter/raw/main/court/banter-court_android_v14; 
                              desktop: https://github.com/vanquish3r/banter/raw/main/court/banter-court_standalonewindows_v14" 
              sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-disableteleport sq-clippingplane="near: 0.05; far: 500;">
-      
+   -->
+<a-scene sq-assetbundle="android: https://cdn.glitch.me/c7debc17-f0f8-45c4-864a-369c5573d0c2/banter-court_android_v19?v=1703316689479; 
+                             desktop: https://cdn.glitch.me/c7debc17-f0f8-45c4-864a-369c5573d0c2/banter-court_standalonewindows_v19?v=1703317433707"   
+             sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-disableteleport sq-clippingplane="near: 0.05; far: 500;" sq-friendpositionjoinallowed="false">
+    
        <!-- Video Player -->
    <script src="https://vidya-player.glitch.me/playlist.js"
             position="0 -2 0" rotation="0 0 0" scale="0.9 0.95 1"
@@ -90,16 +94,16 @@ AFRAME.registerComponent("boxwarp", {
         href="https://afkjail.glitch.me"
       ></a-link> -->
       
-    <!-- Cage Teleporter -->
-      <a-entity
+        <!-- Cage Teleporter -->
+<!--      <a-entity
         id="WarpCube1"
         scale="0.7 2 0.55"
         position="8.095 0.2760005 24.89"
         boxwarp="point:7.757 0.171 -23.894"
         sq-boxcollider
         sq-triggercollider>
-        <!--<a-box scale="1 1 1" material="color: white"></a-box>-->
-      </a-entity>
+       <a-box scale="1 1 1" material="color: white"></a-box>
+      </a-entity> -->
         
    <!-- Click Teleport -->
     <a-box sq-collider sq-interactable handle-click material="transparent: true; opacity: 1; color: black" scale="0.1 0.1 0.1" position="8.45899963 0.15 24.6553001"></a-box> 
