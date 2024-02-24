@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <!-- Add meta tags to show icon/title in the menu in banter -->    
+    <meta property="og:title" content="Banter Court">
+    <meta property="og:description" content="Where Goats Rule the Courtroom!">
+    <meta property="og:image" content="https://raw.githubusercontent.com/vanquish3r/banter/main/court/banter-court.jpg">
+    <meta name="sidequest-space-verification" content="6efdda84-cc12-404b-845a-86c9b2bf63cd">
+    
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    
+<!-- Cage exit and enter spawn point, script from AFK Jail by Moto. Thank you Moto!-->
+    <script>
+    // A simple aframe component to handle the click
+      AFRAME.registerComponent('handle-click', {
+          init: function () {
+              // When you click on an element, run the animation on the parent element
+              this.el.addEventListener('click', () => {
+                 movePlayer({x: 7.83699989, y: 0, z: -25.8180008});
+              })
+          }
+      });
+            
+     function multispaw() {
+        const spawpoints = [];
+        spawpoints[0] = new THREE.Vector3(0, 0, 0);
+
+        const randomspawpoint = Math.floor(Math.random() * 1);
+        movePlayer(spawpoints[randomspawpoint]);
+      }
+      window.loadDoneCallback = () => multispaw();      
+    </script>
+    
+      <!-- Clock script from Parlor by Ben. Thank you Ben!-->  
+    		<script>
+			setInterval(() => {
+				var now = new Date();
+				hourHand.object3D.rotation.z = 2 * Math.PI*(now.getHours()*60+now.getMinutes())/720;
+				minuteHand.object3D.rotation.z = 2 * Math.PI*(now.getMinutes()+now.getSeconds()/60)/60;
+				secondHand.object3D.rotation.z = 2 * Math.PI*now.getSeconds()/60;
+			}, 1000);
+		</script>
+    
+  </head>
+  <body>
+
+<!-- <a-scene sq-assetbundle="android: https://github.com/vanquish3r/banter/raw/main/court/banter-court_android_v13; 
+                             desktop: https://github.com/vanquish3r/banter/raw/main/court/banter-court_standalonewindows_v13" 
+             sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-disableteleport sq-clippingplane="near: 0.05; far: 500;" sq-friendpositionjoinallowed="false">
+  -->
+    <a-scene sq-assetbundle="android: https://github.com/vanquish3r/banter/raw/main/court/banter-court_android_106; 
+                             desktop: https://github.com/vanquish3r/banter/raw/main/court/banter-court_standalonewindows_106" 
+             sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-disableteleport sq-clippingplane="near: 0.05; far: 500;" sq-friendpositionjoinallowed="false">
+   
+<!--<a-scene sq-assetbundle="android: https://cdn.glitch.me/c7debc17-f0f8-45c4-864a-369c5573d0c2/banter-court_android_v19?v=1703316689479; 
+                             desktop: https://cdn.glitch.me/c7debc17-f0f8-45c4-864a-369c5573d0c2/banter-court_standalonewindows_v19?v=1703317433707"   
+             sq-refreshrate="rate:90" sq-spawnpoint="position: 0 0 0 180;" sq-disableteleport sq-clippingplane="near: 0.05; far: 500;" sq-friendpositionjoinallowed="false">
+    -->
+    
+       <!-- Video Player -->
+   <script src="https://vidya-player.glitch.me/playlist.js"
+            position="0 -2 0" rotation="0 0 0" scale="0.9 0.95 1"
+            volume="10" button-position="0 6.4 8.38" button-rotation="0 0 0" 
+              button-scale="2 2 2" instance="banter-court" one-for-each-instance="false" announce="false" spatial="false"
+            playlist="PLZWiw-xxQ4SN5Esnfdv-jq8JTCtevDZ-q"></script>
+
+            <!--Screen cast player-->
+<!--<a-entity   id="banter-court" 
+                sq-browser="url: https://screen-cast.glitch.me/?sid=5671310878734176; mipMaps: 1; pixelsPerUnit: 1600; mode: local;" position="0 -2 0" rotation="0 180 0" announce="false" scale="0.9 0.95 1">
+       </a-entity>-->
+
+        <!-- Jail Portal -->   
+   <a-link
+        title="Jail"
+        position="-7.507 0.1 7.402"
+        rotation="0 135 0"
+        href="https://afkjail.glitch.me"
+      ></a-link>
+        
+   <!-- Click Teleport from AFK Jail by Moto. Thank you Moto! -->
+    <a-box sq-collider sq-interactable handle-click material="transparent: true; opacity: 1; color: black" scale="0.1 0.1 0.1" position="8.45899963 0.15 24.6553001"></a-box> 
+    
+			<!-- Clock from Parlor by Ben. Thank you Ben! -->
+			<a-entity position="-0.098 5.672 31.052">
+				<a-entity id="hourHand">
+					<a-box position="0 0.065 0" scale="0.02 0.13 0.01" color="#f0f0f0"></a-box>
+				</a-entity>
+				<a-entity id="minuteHand">
+					<a-box position="0 0.085 0" scale="0.01 0.17 0.01" color="#f0f0f0"></a-box>
+				</a-entity>
+				<a-entity id="secondHand">
+					<a-box position="0 0.1 0" scale="0.005 0.2 0.01" color="#f0f0f0"></a-box>
+				</a-entity>
+			</a-entity>
+      
+    </a-scene>
+  </body>
+</html>
