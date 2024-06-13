@@ -1,0 +1,239 @@
+<html>
+  <head>
+    <!-- Add meta tags to show icon/title in the menu in banter -->    
+    <meta property="og:title" content="Cannabanter 2.0">
+    <meta property="og:description" content="Dance with the finest plants!">
+   <meta property="og:image" content="https://cdn.sidequestvr.com/file/599787/cannabanter.jpg">
+   <meta name="sidequest-space-verification" content="ef6588f0-5e61-4c6c-bd68-76eec2e2485a">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SN7EBLKJZ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SN7EBLKJZ9');
+</script>
+
+<script src="./bullshcript.js"></script>
+    
+ <!--   <script>
+     window.loadDoneCallback = ()=>{
+        movePlayer({x: 0, y: 0.01, z: 0});
+     };
+    </script> -->
+
+  </head>
+  <body>
+    <a-scene sq-assetbundle="android: https://github.com/vanquish3r/banter/raw/main/cannabanter/cannabanter204c_android?0; 
+                             desktop: https://github.com/vanquish3r/banter/raw/main/cannabanter/cannabanter204c_standalonewindows?0;"
+
+             sq-kitbundle="android: https://github.com/vanquish3r/banter/raw/main/kitbundle/screens_kitbundle_android?0; 
+                           desktop: https://github.com/vanquish3r/banter/raw/main/kitbundle/screens_kitbundle_standalonewindows?0;"
+
+             sq-refreshrate="rate:72" sq-spawnpoint="position: 0 0.01 0 0;" sq-clippingplane="near: 0.05; far: 1000;" sq-friendpositionjoinallowed="enabled: true" sq-disableteleport sq-devtoolsenabled="enabled: true" sq-maxoccupancy="number: 50">
+      
+ <!-- New Video Player  -->
+<script src="https://best-v-player.glitch.me/playlist.js" hand-controls="true" 
+              position="0 -3 8" rotation="0 0 0" scale="1 1 1" volume="3"
+              button-position="0 1.159 30.156" button-rotation="0 0 0" 
+         button-scale="0.4 0.4 0.4" 
+         spatial-min-distance="1"
+         spatial-max-distance="100"
+         playlist="PLzgofGqYK8u47wzvoIz1MWBdOe6ow4R12"
+         announce-four-twenty="true"
+
+              data-playlist-icon-url="https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Playlist.png?v=1711786451727"
+              data-vol-up-icon-url="https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Vol_Up.png?v=1711785431096"
+              data-vol-down-icon-url="https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Vol_Dn.png?v=1711785430202"
+              data-mute-icon-url="https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Vol_Mute_Off.png?v=1711785430667"
+              data-skip-forward-icon-url="https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Sync_FW.png?v=1711785429798"
+              data-skip-backward-icon-url="https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Sync_Bk.png?v=1711785429431">
+              </script>
+
+                <!-- Light Shows and Music PLZWiw-xxQ4SNl-dmJhSk6xSnGuALdCZGf -->
+                <!-- Night at Cannabanter PLZWiw-xxQ4SOvb8f0nA4_QbGl2hAQuoGR -->
+                <!-- Tech House Mix PLzgofGqYK8u47wzvoIz1MWBdOe6ow4R12 -->
+      
+<!-- YouTube Live Player -->
+<!--     <a-entity id="cannabanter-live" sq-browser="url: https://www.youtube.com/embed/fpwx3tqvRg4?si=nsu9_OCBlgiK-a7x; mipMaps: 1; pixelsPerUnit: 1600; mode: local; afterLoadActions: [ { &quot;actionType&quot;: &quot;delayseconds&quot;, &quot;numParam1&quot;: 2}, {&quot;actionType&quot;: &quot;click2d&quot;, &quot;numParam1&quot;: 150, &quot;numParam2&quot;: 150}]"
+                position="0 -3 8 rotation="0 0 0" scale="1 1 1"></a-entity>
+
+    <!-- Temp Screen Cast Player -->
+ <!--       <a-entity   id="cannabanter-screencast" 
+            sq-browser="url: https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/?sid=4202024; mipMaps: 1; pixelsPerUnit: 1600; mode: local;" 
+            position="0 -3 8" rotation="0 0 0" scale="1 1 1" sq-browser-interaction enable-interaction volumelevel="1" >
+            <!-- Screen Backdrop for contrast -->
+ <!--           <a-box opacity="0.9" position="0 0 -0.015" depth="0.01" width="1.09" height="0.64" color="#000000"></a-box>
+            <!-- Mute/UnMute Button -->
+  <!--            <a-plane position="0.3 0.38 0" opacity="1.0" material="transparent: true" width="0.07" height="0.07" 
+            toggle-mute color="#FFFFFF" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/VolumeMute.png?v=1716111177280"></a-plane>
+            <!-- Volume Up Button -->
+  <!--            <a-plane position="0.5 0.38 0" opacity="1.0" material="transparent: true" width="0.07" height="0.07" 
+            volume-level="vvalue: 0.1" color="#00FF00" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/VolumeHigh.png?v=1716111178427"></a-plane>
+            <!-- Volume Down Button -->
+  <!--            <a-plane position="0.4 0.38 0" opacity="1.0" material="transparent: true" width="0.07" height="0.07" class="buttons" 
+            volume-level="vvalue: -0.1" color="#00FF00" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/VolumeLow.png?v=1716170759375"></a-plane>
+            <!-- Go Back Button -->
+   <!--           <a-plane position="-0.5 0.38 0" material="transparent: true" opacity="1" width="0.09" height="0.09" color="#00ff00"
+            go-back visible="true" sq-collider sq-interactable class="buttons" src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/Arrow.png?v=1716160344089"></a-plane>
+        </a-entity>
+
+ <!-- Outfits Poster --> 
+      <a-box sq-collider sq-interactable sq-clickurl="url:https://zephiistuff.readyplayer.me/avatar?lang=en" color="green" opacity="0" position="3.79 1.45 3.28" rotation="0 45 0" depth="0.05" width="1.3" height="1">
+      <a-plane
+        src="https://cdn.glitch.global/b293ecb5-daaf-42ce-bec8-15b497976afe/Zephii%20Outfits%202.jpg?v=1713795978864"
+                rotation="0 180 0" scale="1.3 1 0" material="side: double"></a-plane>
+      </a-box>
+      
+ <!-- Selfie Camera -->       
+      <a-entity sq-kititem="item: assets/_prefabs/selfiecamera/selfiecam.prefab" rotation="0 180 0" position="-2.31 0.805 17.998"></a-entity>
+
+    <!-- Portable Browser -->
+        <a-entity   id="cannabanter-browser" 
+            sq-browser="url: https://firetws.glitch.me/games.html; mipMaps: 1; pixelsPerUnit: 1600; mode: local;" 
+            sq-browser-interaction position="-2.752 7.5 15.3" rotation="0 90 0" scale="0.9 0.9 0.9" enable-interaction 
+            sq-rigidbody="useGravity: false; drag:10; angularDrag:10;" volumelevel="1" class="screen">
+            <!-- this plane is used for the collider to allow it to be moved -->
+            <a-plane  id="ScreenCollider" opacity="0" position="0 0 -0" scale="1.0 0.55 0.05" color="#ff0000" sq-boxcollider="" sq-grabbable="" visible="false"></a-plane>
+            <!-- Screen Backdrop for contrast -->
+            <a-box opacity="0.9" position="0 0 -0.015" depth="0.01" width="1.1" height="0.65" color="#000000"></a-box>
+            <!-- The lock/unlock button to toggle the screen collider -->
+            <a-plane position="0 0.38 0" material="transparent: true" opacity="1" width="0.09" height="0.09" class="buttons"
+            lockbutton color="#FF0000" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/HG2.png?v=1716104397047"></a-plane>
+            <!-- Grow Button -->
+            <a-plane position="0.6 0.06 0" opacity="1.0"  material="transparent: true" width="0.09" height="0.09" class="buttons" color="#00FF00"
+            scale-screen="size: shrink; avalue: 0.1" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/expand.png?v=1716108852327"></a-plane>
+            <!-- Shrink Button -->
+            <a-plane position="0.6 -0.06 0" opacity="1.0" material="transparent: true" width="0.09" height="0.09" class="buttons" color="#00FF00"
+            scale-screen="size: shrink; avalue: -0.1" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/shrink.png?v=1716109181082"></a-plane>
+            <!-- Rotate Left Button -->
+            <a-plane position="-0.5 -0.37 0" material="transparent: true" opacity="1" width="0.09" height="0.09" color="#00ff00"
+            rotate="axis: y; amount: -10" visible="false" sq-collider sq-interactable class="tilt buttons" src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/RL.png?v=1716111102893"></a-plane>
+            <!-- Rotate Right Button -->
+            <a-plane position="0.5 -0.37 0" material="transparent: true" opacity="1" width="0.09" height="0.09"  color="#00ff00"
+            rotate="axis: y; amount: 10" visible="false" sq-collider sq-interactable class="tilt buttons" src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/RR.png?v=1716111103987"></a-plane>
+            <!-- Tilt Forwards Button -->
+            <a-plane position="-0.4 -0.37 0" material="transparent: true" opacity="1" width="0.09" height="0.09" color="#00ff00"
+            rotate="axis: x; amount: 5"  visible="false" sq-collider sq-interactable class="tilt buttons" src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/TF.png?v=1716085749794"></a-plane>
+            <!-- Tilt Backwards Button -->
+            <a-plane position="0.4 -0.37 0" material="transparent: true" opacity="1" width="0.09" height="0.09" color="#00ff00"
+            rotate="axis: x; amount: -5" visible="false" sq-collider sq-interactable class="tilt buttons" src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/TB.png?v=1716085748762"></a-plane>
+            <!-- Toggle Rotations Button -->
+            <a-plane position="-0.6 -0.3 0" opacity="1.0" material="transparent: true" width="0.09" height="0.09" color="#FFFFFF" class="buttons"
+            sq-collider="" sq-interactable="" src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/Rot.png?v=1716104395136" enablerot="false"></a-plane>
+            <!-- Mute/UnMute Button -->
+            <a-plane position="0.3 0.38 0" opacity="1.0" material="transparent: true" width="0.09" height="0.09" class="buttons"
+             toggle-mute color="#FFFFFF" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/VolumeMute.png?v=1716111177280"></a-plane>
+            <!-- Volume Up Button -->
+            <a-plane position="0.5 0.38 0" opacity="1.0" material="transparent: true" width="0.09" height="0.09" class="buttons" volume-level="vvalue: 0.1"
+            color="#00FF00" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/VolumeHigh.png?v=1716111178427"></a-plane>
+            <!-- Volume Down Button -->
+            <a-plane position="0.4 0.38 0" opacity="1.0" material="transparent: true" width="0.09" height="0.09" class="buttons" volume-level="vvalue: -0.1"
+            color="#00FF00" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/VolumeLow.png?v=1716170759375"></a-plane>
+            <!-- Hide/Show Buttons Button -->
+            <a-plane position="-0.6 0 0" opacity="1.0" material="transparent: true" width="0.09" height="0.09" color="#FFFFFF" 
+            hidebuttons="" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/Eye.png?v=1716112219308"></a-plane>
+            <!-- Info Button -->
+            <a-plane position="-0.6 0.28 0" opacity="1.0" material="transparent: true" width="0.09" height="0.09" color="#0FF00" 
+            sq-collider click-url="url: https://firetws.glitch.me/Info.html" class="buttons" sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/Info.png?v=1716185268676"></a-plane>
+            <!-- Go Back Button -->
+            <a-plane position="-0.5 0.38 0" material="transparent: true" opacity="1" width="0.09" height="0.09" color="#00ff00"
+             navigate-browser="action: goback" visible="true" sq-collider sq-interactable class="buttons" src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/Arrow.png?v=1716160344089"></a-plane>
+            <!-- Go Forwards Button -->
+            <a-plane position="-0.4 0.38 0" material="transparent: true" opacity="1" rotation="0 0 180" width="0.09" height="0.09" color="#00ff00"
+            navigate-browser="action: goforward" visible="true" sq-collider sq-interactable class="buttons" src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/Arrow.png?v=1716160344089"></a-plane>
+            
+            <!-- Google Button -->
+            <a-plane position="-0.6 0.16 0" opacity="1.0" material="transparent: true" width="0.09" height="0.09" class="buttons"
+            click-url="url: https://google.com/" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/Google.png?v=1716082248137"></a-plane>
+            <!-- Home Button -->
+            <a-plane position="-0.27 0.38 0" opacity="1.0" material="transparent: true" width="0.09" height="0.09" class="buttons" color="#FF0000"
+            click-url="url: https://firetws.glitch.me/games.html" sq-collider sq-interactable src="https://cdn.glitch.global/77fc6863-8a0a-4b9a-b1c0-c56769d5254b/Home.png?v=1716110821037"></a-plane>
+            
+            <!-- Jack box Button -->
+            <a-plane position="0.68 0.30 0" opacity="1.0" width="0.20" height="0.04" class="buttons"
+            click-url="url: https://jackbox.tv/"    color="#000000" sq-collider sq-interactable >
+            <a-text value="Jackbox.tv" position="0 0 0.01" align="center" scale="0.11 0.11 0.11" color="#FFFFFF"></a-text></a-plane>
+            <!-- Papas.tv Button -->
+            <a-plane position="0.68 0.25 0" opacity="1.0" width="0.2" height="0.04" class="buttons"
+            click-url="url: https://papas.tv/"  color="#000000" sq-collider sq-interactable >
+            <a-text value="Papas.tv" position="0 0 0.01" align="center" scale="0.11 0.11 0.11" color="#FFFFFF"></a-text></a-plane>
+            
+            <!-- Placeholder Button -->
+            <a-plane position="0.68 -0.30 0" opacity="1.0" width="0.2" height="0.04" class="buttons"
+            click-url="url: https://bantervr.com/events"    color="#000000" sq-collider sq-interactable >
+            <a-text value="Banter Events" position="0 0 0.01" align="center" scale="0.11 0.11 0.11" color="#FFFFFF"></a-text></a-plane>
+        </a-entity>
+
+
+<!-- Old Portable Browser -->
+<!--<a-entity   id="cannabanter-browser" 
+                sq-browser="url:https://bantervr.com/events; mipMaps: 1; pixelsPerUnit: 1600; mode: local;" 
+                sq-browser-interaction position="-2.752 7.5 15.3" rotation="0 90 0" scale="0.9 0.9 0.9" enable-interaction 
+                sq-rigidbody="useGravity: false; drag:10; angularDrag:10;" sq-grabbable >
+                    <a-box opacity="0.6" position="0 0 -0.006" rotation="0 0 0" depth="0.01" width="1.1" height="0.65" color="#000000" sq-collider sq-grabbable ></a-box>
+
+                <a-box position="0.2 0.4 0.0" opacity="0" rotation="0 0 0" depth="0" width="0" height="0"
+                color="#000000" sq-collider sq-interactable >
+                <a-text value="GRABBABLE AND MOVEABLE LOCAL BROWSER\nVR: Use right controller's top trigger button to click. Click and drag to scroll." position="-0.195 -0.02 -0.01" align="center" scale="0.14 0.14 0.14" rotation="0 0 0" color="#ffffff"></a-text></a-box>
+
+                <a-box position="0.7 0.4 0.0" opacity="0" rotation="0 0 0" depth="0" width="0" height="0"
+                color="#000000" sq-collider sq-interactable >
+                <a-text value="FireRat's\nTOP PICKS\nMultiplayer Games" position="0 -0.012 -0.01" align="center" scale="0.12 0.12 0.12" rotation="0 0 0" color="#AE2235"></a-text></a-box>
+
+                <a-box position="0.7 0.3 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://www.crazygames.com/t/board"   color="#000000" sq-collider sq-interactable >
+                <a-text value="1 CrazyGames" position="-0.1025 0 0.016" align="left" scale="0.12 0.12 0.12" rotation="0 0 0" color="#FFFF00"></a-text></a-box>
+                <a-box position="0.7 0.25 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://pyx.gianlu.xyz/game.jsp"  color="#000000" sq-collider sq-interactable >
+                <a-text value="2 CaH gianlu" position="-0.1025 0 0.016" align="left" scale="0.12 0.12 0.12" rotation="0 0 0" color="#AAFF00"></a-text></a-box>
+                <a-box position="0.7 0.2 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://xyzzy.clrtd.com/zy/game.jsp"  color="#000000" sq-collider sq-interactable >
+                <a-text value="3 CaH clrtd" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#00ff00"></a-text></a-box>
+                <a-box position="0.7 0.15 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://www.cardzmania.com/"  color="#000000" sq-collider sq-interactable >
+                <a-text value="4 CardzMania" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#AAFF00"></a-text></a-box>
+                <a-box position="0.7 0.1 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://playingcards.io/"     color="#000000" sq-collider sq-interactable >
+                <a-text value="5 PlayingCards" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#FFFF00"></a-text></a-box>
+                <a-box position="0.7 0.05 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://picturecards.online/static/index.html"    color="#000000" sq-collider sq-interactable >
+                <a-text value="6 PictureCards" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#00FF00"></a-text></a-box>
+                <a-box position="0.7 0.0 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://colonist.io/#banter"  color="#000000" sq-collider sq-interactable >
+                <a-text value="7 colonist.io" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#AAFF00"></a-text></a-box>
+                <a-box position="0.7 -0.05 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://buddyboardgames.com/"     color="#000000" sq-collider sq-interactable >
+                <a-text value="8 BudBoardGames" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#00ff00"></a-text></a-box>
+                <a-box position="0.7 -0.1 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://scuffeduno.online/menu/main"  color="#000000" sq-collider sq-interactable >
+                <a-text value="9 Scuffed UNO" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#00ff00"></a-text></a-box>
+                <a-box position="0.7 -0.15 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://www.calculators.org/games/uno-with-friends/"  color="#000000" sq-collider sq-interactable >
+                <a-text value="10 UNO wFriends" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#AAFF00"></a-text></a-box>
+                <a-box position="0.7 -0.2 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://playcards.live/"  color="#000000" sq-collider sq-interactable >
+                <a-text value="11 Playcards.live" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#00ff00"></a-text></a-box>
+                <a-box position="0.7 -0.25 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://sketchful.io"     color="#000000" sq-collider sq-interactable >
+                <a-text value="12 Sketchful.io" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#AAFF00"></a-text></a-box>
+                <a-box position="0.7 -0.30 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.22" height="0.04"
+                click-url-1="url: https://drawbattle.io/"   color="#000000" sq-collider sq-interactable >
+                <a-text value="13 DrawBattle 4P" position="-0.1025 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#00ff00"></a-text></a-box>-->
+<!--
+                <a-box position="0.4 0.4 0.0" opacity="0.6" rotation="0 0 0" depth="0.04" width="0.18" height="0.04"
+                click-url-1="url: https://google.com/"  color="#000000" sq-collider sq-interactable >
+                <a-text value="Google?!?!" position="0 0 -0.01" align="center" scale="0.12 0.12 0.12" rotation="0 0 0" color="#00ff00"></a-text></a-box>
+                <a-box position="0.2 0.4 0.0" opacity="0.6" rotation="0 0 0" depth="0.04" width="0.18" height="0.04"
+                click-url-1="url: https://inv.tux.pizza/"   color="#000000" sq-collider sq-interactable >
+                <a-text value="Invidious YT" position="0 0 -0.01" align="center" scale="0.12 0.12 0.12" rotation="0 0 0" color="#00ff00"></a-text></a-box>
+            -->
+         <!--  </a-entity> -->
+
+         <!-- CAH Table -->
+ <!--                <a-entity sq-nonconvexcollider="recursive: true" sq-interactable="recursive: true" gltf-model="https://cdn.glitch.global/68a8fda1-eaf5-4ffe-8fbf-50f0798374a4/ha_h__table_main.glb?v=1697146939160" scale="0.01 0.01 0.01" position="0 6.09 15.3"></a-entity> -->
+      
+    </a-scene>
+  </body>
+</html>
