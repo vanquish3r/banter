@@ -176,6 +176,7 @@ function disableScreencast() {
     // Browser is on, remove it
     screencast.parentElement.removeChild(screencast);
   }
+  screenCastOn = 0;
 }
 
 function enableScreencast() {
@@ -193,6 +194,7 @@ function enableScreencast() {
   );
   document.querySelector("a-scene").appendChild(screencast);
   muteScreencast();
+  screenCastOn = 1;
 };
 
 function muteScreencast() {
@@ -219,38 +221,43 @@ MuteButton.setAttribute("color","#FFFFFF");
 TheBrowser.setAttribute("datamuted", "false");
 TheBrowser.components["sq-browser"].runActions([ { actionType: "runscript", strparam1:
 "document.querySelectorAll('video, audio').forEach((elem) => elem.muted=false);", }, ]);
+if(screenCastOn == 1){
 The2Browser.components["sq-browser"].runActions([ { actionType: "runscript", strparam1:
 "document.querySelectorAll('video, audio').forEach((elem) => elem.muted=false);", }, ]);
+}
 } else {
 MuteButton.setAttribute("color","#FF0000");
 TheBrowser.setAttribute("datamuted", "true")
 TheBrowser.components["sq-browser"].runActions([ { actionType: "runscript", strparam1:
   "document.querySelectorAll('video, audio').forEach((elem) => elem.muted=true);",
   }, ]);
+if(screenCastOn == 1){
 The2Browser.components["sq-browser"].runActions([ { actionType: "runscript", strparam1:
-  "document.querySelectorAll('video, audio').forEach((elem) => elem.muted=true);",
-  }, ]);   } });   }, });
+  "document.querySelectorAll('video, audio').forEach((elem) => elem.muted=true);",}, ]);
+}   } });   }, });
 
 // Changes Volume of BOTH Screens when button clicked By Fire with help from HBR
+let screenCastOn = 0;
   AFRAME.registerComponent("volume-level", {
     schema: {
       vvalue: { type: "number" },
     },
     init: function () {
-      this.el.addEventListener("click", () => {  
-        var screenVolume = this.el.parentElement;
-        var screen2Volume = document.getElementById("cannabanter-screencast");
+      this.el.addEventListener("click", () => { 
+var screenVolume = this.el.parentElement;
         let volume = parseFloat(screenVolume.getAttribute("volumelevel"));
+if(screenCastOn == 1){
+var screen2Volume = document.getElementById("cannabanter-screencast");
+screen2Volume.components["sq-browser"].runActions([ { actionType: "runscript", strparam1:
+"document.querySelectorAll('video, audio').forEach((elem) => elem.volume=" + volume + ");", }, ]);
+}
         volume += this.data.vvalue;
         volume = volume.toFixed(2);
         if (volume > 1) {volume = 1};
         if (volume < 0) {volume = 0};
         screenVolume.components["sq-browser"].runActions([ { actionType: "runscript", strparam1:
     "document.querySelectorAll('video, audio').forEach((elem) => elem.volume=" + volume + ");", }, ]);
-        screen2Volume.components["sq-browser"].runActions([ { actionType: "runscript", strparam1:
-    "document.querySelectorAll('video, audio').forEach((elem) => elem.volume=" + volume + ");", }, ]);
         this.el.setAttribute("color","#AAAAAA");
         screenVolume.setAttribute("volumelevel", volume);
-        screen2Volume.setAttribute("volumelevel", volume);
         setTimeout(() => {  this.el.setAttribute("color","#00FF00"); }, 100);
         });        },        });
