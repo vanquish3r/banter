@@ -237,11 +237,10 @@ The2Browser.components["sq-browser"].runActions([ { actionType: "runscript", str
       vvalue: { type: "number" },
     },
     init: function () {
-      this.el.addEventListener("click", () => { 
-var screen2Volume = this.el.parentElement;
-        var screenVolume = document.getElementById("cannabanter-screencast");
+      this.el.addEventListener("click", () => {  
+        var screenVolume = this.el.parentElement;
+        var screen2Volume = document.getElementById("cannabanter-screencast");
         let volume = parseFloat(screenVolume.getAttribute("volumelevel"));
-        let volume2 = parseFloat(screen2Volume.getAttribute("volumelevel"));
         volume += this.data.vvalue;
         volume = volume.toFixed(2);
         if (volume > 1) {volume = 1};
