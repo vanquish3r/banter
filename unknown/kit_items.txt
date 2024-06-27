@@ -1,0 +1,11 @@
+assets/_content/prefabs/holocamscreen.prefab
+assets/_content/prefabs/holoscreen.prefab
+assets/_content/prefabs/jokeclub.prefab
+assets/_content/prefabs/logooff.prefab
+assets/_content/prefabs/mic.prefab
+assets/_content/prefabs/micstool.prefab
+assets/_content/prefabs/multiverse.prefab
+assets/_content/prefabs/propoff.prefab
+assets/_content/prefabs/screenoff.prefab
+assets/_content/prefabs/therockymic.prefab
+assets/_content/prefabs/videoscreen.prefab
